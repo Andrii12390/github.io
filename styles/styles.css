@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+.page-layout {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+}
+
+/* Header and Footer */
+.header, .footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: rgb(74, 74, 206);
+  padding: 5px;
+}
+
+.header-content, .footer-content {
+  padding: 5px 3px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.header-content h3, .footer-content h3 {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  column-gap: 20px;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: rgb(129, 129, 129);
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar-container {
+  margin-top: 8px;
+  background-color: rgb(155, 235, 155);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content Section */
+.content {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  background-color: rgb(199, 162, 95);
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 1fr; 
+  }
+
+  .content .left-section, 
+  .content .middle-section, 
+  .content .right-section {
+    display: block;
+    padding: 8px;
+    background-color: rgb(199, 162, 95); 
+  }
+
+  .content .middle-section {
+    overflow-y: auto;
+  }
+}
+
+/* Content Sections */
+.content .left-section {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  background-color: rgb(199, 162, 95);
+  padding: 8px;
+}
+
+.content .middle-section {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  padding: 8px;
+  overflow-y: auto; 
+  position: relative; 
+}
+
+.content .right-section {
+  background-color: rgb(199, 162, 95);
+  padding: 8px;
+}
+
+.content .left-section ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  padding: 15px;
+  max-height: 245px;
+  overflow-y: auto;
+}
+
+.text-container::-webkit-scrollbar, 
+.list-container::-webkit-scrollbar, 
+.content::-webkit-scrollbar, 
+.middle-section::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.list-container {
+  background-color: rgb(155, 235, 155);
+  color: black;
+  padding: 4px;
+  border-radius: 20px;
+  overflow-y: auto;
+}
