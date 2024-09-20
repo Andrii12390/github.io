@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/styles.css" />
-  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>Lab 1</title>
 </head>
 <body>
   <div class="page-layout">
     <header class="header">
       <div class="header-content">
-        <h3>About us</h3>
+        <h3>About</h3>
       </div>
     </header>
     
@@ -33,9 +33,14 @@
         </div>
       </section>
       
-      <!-- Middle Section -->
-      <section class="middle-section">
-        <img class="bg-image" src="../images/jojo.jpg" alt="Jojo Image" />
+      <section class="middle-section no-scrollbar">
+        <div>
+          <img class="bg-image" src="images/jojo.jpg" alt="Jojo Image" usemap="#jojoMap" />
+          
+          <map name="jojoMap">
+            <area shape="rect" coords="0,0,1024,500" href="https://yourlink.com" alt="Clickable Image" />
+          </map>
+        </div>
         <nav class="navbar-container">
           <ul class="navbar">
             <li><a href="index.html">Home</a></li>
@@ -57,7 +62,7 @@
     
     <footer class="footer">
       <div class="footer-content">
-        <h3>About us</h3>
+        <h3>About</h3>
       </div>
     </footer>
   </div>
